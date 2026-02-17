@@ -45,7 +45,7 @@ body {
 /* Phone Image */
 .hero-img {
   width: 100%;
-  max-width: 420px;     /* controls max size */
+  max-width: 350px;     /* controls max size */
   max-height: 80vh;     /* prevents it from becoming too tall */
   object-fit: contain;
   position: relative;
@@ -170,6 +170,7 @@ body {
 #cta {
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
 }
+
 
 
 
