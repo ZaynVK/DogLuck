@@ -5,55 +5,32 @@
   --light-blue: #1e293b;
 }
 
-/* BODY */
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--dark-blue);
-  scroll-behavior: smooth;
 }
 
-/* ================= GLASS NAVBAR ================= */
-
+/* Navbar */
 .glass-nav {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.nav-link {
-  color: white !important;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: var(--accent-blue) !important;
-}
-
-
-/* ================= HERO SECTION FIX ================= */
-
+/* Hero */
 #hero {
-  overflow: hidden;   /* prevents overflow cutting */
+  overflow: hidden;
 }
 
-/* Wrapper */
 .hero-img-wrapper {
   position: relative;
-  height: 100%;
 }
 
-/* Phone Image */
 .hero-img {
   width: 100%;
-  max-width: 350px;     /* controls max size */
-  max-height: 80vh;     /* prevents it from becoming too tall */
+  max-width: 350px;
   object-fit: contain;
-  position: relative;
-  z-index: 2;
-  animation: float 4s ease-in-out infinite;
 }
 
-/* Glow */
 .hero-glow {
   position: absolute;
   width: 300px;
@@ -61,90 +38,22 @@ body {
   background: radial-gradient(circle, rgba(59,130,246,0.5), transparent);
   border-radius: 50%;
   filter: blur(100px);
-  z-index: 1;
 }
 
-/* Floating animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-/* Responsive Fix */
-@media (max-width: 992px) {
-  .hero-img {
-    max-width: 300px;
-    margin-top: 40px;
-  }
-}
-
-
-/* ================= BUTTONS ================= */
-
+/* Buttons */
 .gradient-btn {
   background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
   border: none;
   color: white;
-  transition: 0.4s;
-}
-
-.gradient-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(59,130,246,0.5);
 }
 
 .gradient-outline {
   border: 2px solid var(--accent-blue);
   color: var(--accent-blue);
   background: transparent;
-  transition: 0.4s;
 }
 
-.gradient-outline:hover {
-  background: var(--accent-blue);
-  color: white;
-}
-
-/* ================= FEATURES ================= */
-
-#features {
-  background: var(--light-blue);
-  color: white;
-}
-
-.feature-box {
-  background: rgba(255,255,255,0.05);
-  padding: 30px;
-  border-radius: 15px;
-  transition: 0.4s;
-}
-
-.feature-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(59,130,246,0.2);
-}
-
-/* ================= PRICING FIX ================= */
-
-#pricing {
-.pricing-card h4,
-.pricing-card h3,
-.pricing-card p {
-  color: white !important;   /* 🔥 FORCE TEXT TO BE WHITE */
-}
-
-.pricing-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 25px 50px rgba(59,130,246,0.4);
-}
-
-/* Featured card highlight */
-.featured {
-  border: 2px solid #3b82f6;
-  box-shadow: 0 0 40px rgba(59,130,246,0.4);
-}
-/* ================= TESTIMONIAL STYLE ================= */
-
+/* Testimonials */
 #testimonials {
   background: linear-gradient(to right, #ff0000, #ff6a6a);
 }
@@ -152,35 +61,8 @@ body {
 .testimonial-text {
   font-size: 2rem;
   font-weight: bold;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.testimonial-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* ================= TESTIMONIAL SECTION ================= */
-
-#testimonials {
-  background: linear-gradient(to right, #ff0000, #ff6a6a);
-  color: white;
-  padding: 80px 0;
-}
-
-.testimonial-text {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.6;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Image + Name Wrapper */
 .testimonial-user {
   display: flex;
   align-items: center;
@@ -188,7 +70,6 @@ body {
   gap: 20px;
 }
 
-/* Round small image */
 .testimonial-avatar {
   width: 90px;
   height: 90px;
@@ -196,21 +77,19 @@ body {
   object-fit: cover;
 }
 
-/* Name styling */
 .testimonial-name {
   font-style: italic;
   font-size: 1.2rem;
   margin: 0;
 }
 
-/* ================= CTA ================= */
+/* Features */
+#features {
+  background: var(--light-blue);
+  color: white;
+}
 
+/* CTA */
 #cta {
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
 }
-
-
-
-
-
-
