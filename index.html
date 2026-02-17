@@ -77,50 +77,63 @@
 </section>
 <!-- ================= TESTIMONIALS ================= -->
 
-<section id="testimonials" class="py-5">
-  <div class="container text-center">
-    <h2 class="text-white mb-5">What Indian Pet Owners Say</h2>
+<section id="testimonials" class="text-center text-white py-5">
 
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <div class="testimonial-box">
-            <p>
-              DogLuck helped my Bruno find his perfect match in Mumbai.
-              The experience felt safe and truly premium.
-            </p>
-            <img src="images/dog-img.jpg" class="testimonial-img" alt="Dog">
-            <h6>Riya, Mumbai</h6>
-          </div>
+      <!-- Item 1 -->
+      <div class="carousel-item active">
+        <div class="container">
+          <h2 class="testimonial-text">
+            My dog used to be so lonely, but with DogLuck's help,
+            they've found the love of their life.
+          </h2>
+
+          <img src="images/dog-img.jpg"
+               class="testimonial-img mt-4"
+               alt="User">
+
+          <em class="d-block mt-3">Riya, Mumbai</em>
         </div>
-
-        <div class="carousel-item">
-          <div class="testimonial-box">
-            <p>
-              I was unsure initially, but now Simba has found his best friend in Delhi.
-              Highly recommended for Indian dog lovers.
-            </p>
-            <img src="images/lady-img.jpg" class="testimonial-img" alt="User">
-            <h6>Arjun, New Delhi</h6>
-          </div>
-        </div>
-
       </div>
 
-      <button class="carousel-control-prev" type="button"
-        data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
+      <!-- Item 2 -->
+      <div class="carousel-item">
+        <div class="container">
+          <h2 class="testimonial-text">
+            I was unsure initially, but now Simba has found his best friend.
+            Highly recommended for Indian dog lovers.
+          </h2>
 
-      <button class="carousel-control-next" type="button"
-        data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
+          <img src="images/lady-img.jpg"
+               class="testimonial-img mt-4"
+               alt="User">
+
+          <em class="d-block mt-3">Arjun, New Delhi</em>
+        </div>
+      </div>
+
     </div>
 
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
   </div>
+
 </section>
+
 
 <!-- ================= FEATURES ================= -->
 
@@ -158,41 +171,61 @@
 
 <!-- ================= PRICING ================= -->
 
-<section id="pricing" class="py-5">
+<section id="pricing" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="mb-5">Affordable Premium Plans</h2>
 
-    <div class="row">
+    <h2 class="fw-bold mb-3">A Plan for Every Dog's Needs</h2>
+    <p class="text-muted mb-5">
+      Simple and affordable price plans for you and your dog.
+    </p>
 
-      <div class="col-lg-4 mb-4" data-aos="zoom-in">
-        <div class="card pricing-card">
+    <div class="row g-4">
+
+      <!-- Starter -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h4>Starter</h4>
-            <h3 class="my-3">Free</h3>
-            <p>Limited Matches</p>
-            <button class="btn gradient-outline mt-3">Sign Up</button>
+            <h3 class="fw-bold">Starter</h3>
+            <h2 class="text-primary my-3">Free</h2>
+
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+
+            <button class="btn btn-outline-dark mt-3">Sign Up</button>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card pricing-card featured">
+      <!-- Pro -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-lg border-primary">
           <div class="card-body">
-            <h4>Pro</h4>
-            <h3 class="my-3">₹49 / mo</h3>
-            <p>Unlimited Matches</p>
-            <button class="btn gradient-btn mt-3">Get Started</button>
+            <h3 class="fw-bold">Labrador</h3>
+            <h2 class="my-3">₹49 / mo</h2>
+
+            <p>50 Matches Per Day</p>
+            <p>Unlimited Messages</p>
+            <p>3hr. App Usage</p>
+
+            <button class="btn btn-dark mt-3">Sign Up</button>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
-        <div class="card pricing-card">
+      <!-- Premium -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card h-100 shadow-sm">
           <div class="card-body">
-            <h4>Premium</h4>
-            <h3 class="my-3">₹99 / mo</h3>
+            <h3 class="fw-bold">Mastiff</h3>
+            <h2 class="my-3">₹99 / mo</h2>
+
             <p>Priority Listing</p>
-            <button class="btn gradient-outline mt-3">Join Now</button>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+
+            <button class="btn btn-dark mt-3">Sign Up</button>
           </div>
         </div>
       </div>
@@ -200,6 +233,7 @@
     </div>
   </div>
 </section>
+
 <section id="cta" class="text-center py-5">
   <div class="container">
     <h2 class="text-white mb-4">Start Your Dog's Love Story Today</h2>
@@ -230,4 +264,5 @@
 
 </body>
 </html>
+
 
