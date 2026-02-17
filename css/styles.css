@@ -8,15 +8,35 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--dark-blue);
+  scroll-behavior: smooth;
+  animation: fadeInBody 1s ease-in-out;
 }
 
-/* Navbar */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ================= NAVBAR ================= */
+
 .glass-nav {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(15px);
+  transition: 0.4s ease;
 }
 
-/* Hero */
+.nav-link {
+  color: white !important;
+  transition: 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-blue) !important;
+  transform: translateY(-2px);
+}
+
+/* ================= HERO ================= */
+
 #hero {
   overflow: hidden;
 }
@@ -25,12 +45,25 @@ body {
   position: relative;
 }
 
+/* Floating animation */
 .hero-img {
   width: 100%;
   max-width: 350px;
   object-fit: contain;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.4s ease;
 }
 
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Glow pulse animation */
 .hero-glow {
   position: absolute;
   width: 300px;
@@ -38,29 +71,63 @@ body {
   background: radial-gradient(circle, rgba(59,130,246,0.5), transparent);
   border-radius: 50%;
   filter: blur(100px);
+  animation: pulseGlow 3s infinite alternate;
 }
 
-/* Buttons */
+@keyframes pulseGlow {
+  from { transform: scale(1); opacity: 0.6; }
+  to { transform: scale(1.2); opacity: 1; }
+}
+
+/* ================= BUTTONS ================= */
+
 .gradient-btn {
   background: linear-gradient(45deg, var(--primary-blue), var(--accent-blue));
   border: none;
   color: white;
+  transition: 0.4s ease;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(59,130,246,0.6);
 }
 
 .gradient-outline {
   border: 2px solid var(--accent-blue);
   color: var(--accent-blue);
   background: transparent;
+  transition: 0.4s ease;
 }
 
-/* Testimonials */
+.gradient-outline:hover {
+  background: var(--accent-blue);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(59,130,246,0.4);
+}
+
+/* ================= TESTIMONIALS ================= */
+
 #testimonials {
   background: linear-gradient(to right, #ff0000, #ff6a6a);
+  animation: fadeInSection 1s ease;
+}
+
+@keyframes fadeInSection {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .testimonial-text {
   font-size: 2rem;
   font-weight: bold;
+  animation: fadeInText 1.2s ease;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .testimonial-user {
@@ -70,11 +137,18 @@ body {
   gap: 20px;
 }
 
+/* Avatar hover animation */
 .testimonial-avatar {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.testimonial-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .testimonial-name {
@@ -83,13 +157,48 @@ body {
   margin: 0;
 }
 
-/* Features */
+/* ================= FEATURES ================= */
+
 #features {
   background: var(--light-blue);
   color: white;
 }
 
-/* CTA */
+.feature-box {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(59,130,246,0.3);
+}
+
+/* ================= PRICING ================= */
+
+.card {
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+}
+
+/* ================= CTA ================= */
+
 #cta {
   background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  animation: fadeInSection 1s ease;
+}
+
+#cta .btn {
+  transition: 0.4s ease;
+}
+
+#cta .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
