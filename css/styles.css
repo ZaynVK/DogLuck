@@ -48,7 +48,7 @@ body {
 /* Floating animation */
 .hero-img {
   width: 100%;
-  max-width: 350px;
+  max-width: 250px;
   object-fit: contain;
   animation: float 4s ease-in-out infinite;
   transition: transform 0.4s ease;
@@ -110,7 +110,7 @@ body {
 /* ================= TESTIMONIALS ================= */
 
 #testimonials {
-  background: linear-gradient(to right, #ff0000, #ff6a6a);
+  background: linear-gradient(to right, #2563eb, #0f172a);
   animation: fadeInSection 1s ease;
 }
 
@@ -202,3 +202,4 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
+
