@@ -1,193 +1,213 @@
 body {
   font-family: "Montserrat";
-  font-weight:bold;
+  font-weight: bold;
+  scroll-behavior: smooth;
 }
+
+/* ================= TITLE ================= */
+
 #title {
-  background-color: #EB5353;
-  text-align:left;
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  text-align: left;
   color: white;
 }
+
 .container-fluid {
   padding: 3% 15% 10%;
 }
-.btn {
-margin: 4% 4% 4% 0%;
-}
-.row {
-  margin-top: 30px;
-}
+
 h1 {
-  text-align: left;
-  width:100%;
-  font-family: "Montserrat";
   font-weight: 800;
-  line-height: 1.5;
+  line-height: 1.4;
   font-size: 3rem;
-  margin-left: 11%;
+  animation: fadeInLeft 1.2s ease-in-out;
 }
+
+/* Phone Animation */
 .iphone6 {
   width: 60%;
-  transform: rotate(25deg);
+  transform: rotate(20deg);
   position: absolute;
-  right:120px;
-  /* Equal to rotateZ(45deg) */
+  right: 100px;
+  animation: float 3s ease-in-out infinite;
 }
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(20deg); }
+  50% { transform: translateY(-15px) rotate(20deg); }
+  100% { transform: translateY(0) rotate(20deg); }
+}
+
 @media (max-width:1028px) {
-  .btn {
-  margin: 4% 1% 6% 0%;
-  position:relative;
-  left:20px;
-  }
-  .iphone6{
-    width: 50%;
+  .iphone6 {
+    width: 60%;
     transform: rotate(0);
     position: static;
   }
 }
-/* Navabar */
+
+/* ================= NAVBAR ================= */
+
 .navbar-brand {
   font-family: "Ubuntu";
   font-size: 2rem;
   font-weight: bold;
-  padding: 0 0;
 }
-.navbar {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 4rem;
-}
-.nav-item {
-  padding: 0 20px;
-  font-size: 20px;
-  font-weight: lighter;
-}
-/* features */
-#features{
-  padding:7% 15%;
-  background-color: #fff;
-  position: relative;
-}
-.row {
-  text-align: center;
-}
-.feature-item {
-  color: #EF8172;
-}
-.feature-item:hover {
-  color: #EB5353;
-}
-.features-name{
-  font-family: "Montserrat";
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin:5% 5% 4% 0;;
-}
-.features-para{
-  width: 55%;
-margin: 4% 22%;
-color: #8f8f8f;
-}
-.feature-item{
-  margin-right: 5%;
-}
-/* Testimonials */
-#testimonials{
-  text-align: center;
-  background-color: #EB5353;
-  color: #fff;
-}
-.testimonial-text{
-  font-family:"Montserrat";
-  font-weight: bold;
-  font-size: 3rem;
-}
-.testimonial-image{
-  width:15%;
-  border-radius: 100%;
-  margin:20px;
-}
-.carousel-item{
-  padding:7% 15%;
-}
-@media (max-width:1028px) {
-  .testimonial-text{
-    font-family:"Montserrat";
-    font-weight: bold;
-    font-size: 1.5rem;  }
-  }
- /* press */
- #press{
-   background-color: #EB5353;
-   text-align: center;
-   padding-bottom: 3%;
- }
-.press-image{
-  margin: 20px 20px 50px;
-  width:15%;
-}
-/* Pricing */
-#pricing{
-  padding:100px;
-  text-align: center;
-}
-.pricing-coloumn{
-  padding:2% 2%;
-}
-.pricing-heading{
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.pricing-para{
-  font-family: "Montserrat";
-  font-weight: lighter;
-  color: #8f8f8f;
 
+.nav-link {
+  color: white !important;
+  transition: 0.3s;
 }
-/* call to action */
-#cta{
-  background-color: #EB5353;
+
+.nav-link:hover {
+  color: #93c5fd !important;
+}
+
+/* ================= FEATURES ================= */
+
+#features {
+  padding: 7% 15%;
+  background-color: white;
+}
+
+.feature-box {
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+}
+
+.feature-icon {
+  color: var(--secondary-blue);
+  transition: 0.4s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+  background-color: var(--light-blue);
+}
+
+.feature-box:hover .feature-icon {
+  color: var(--primary-blue);
+  transform: scale(1.1);
+}
+
+.features-para {
+  color: #6b7280;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+#testimonials {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  color: white;
   text-align: center;
-  padding:100px;
 }
-.cta-text{
-  text-align:center;
-  width:60%;
-  font-family: "Montserrat";
-  color: #fff;
-  font-weight: 1000;
-  line-height: 1.5;
+
+.testimonial-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.testimonial-image {
+  width: 15%;
+  border-radius: 50%;
+  margin: 20px;
+  border: 4px solid white;
+}
+
+/* ================= PRESS ================= */
+
+#press {
+  background: var(--secondary-blue);
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+.press-image {
+  margin: 20px;
+  width: 15%;
+  filter: brightness(0) invert(1);
+}
+
+/* ================= PRICING ================= */
+
+#pricing {
+  padding: 100px;
+  background-color: var(--light-blue);
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+}
+
+.card-header {
+  background: var(--secondary-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0 !important;
+}
+
+.btn-outline-dark {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* ================= CTA ================= */
+
+#cta {
+  background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+  text-align: center;
+  padding: 100px;
+}
+
+.cta-text {
+  color: white;
+  font-weight: 800;
   font-size: 2.5rem;
-  position: relative;
-  left:220px;
 }
-@media (max-width:1028px) {
-  .cta-text{
-    text-align: left;
-    width:100%;
-    font-family: "Montserrat";
-    color: #fff;
-    font-weight: 1000;
-    line-height: 1.5;
-    font-size: 2.5rem;
-    position:relative;
-    left:10%;
-  }
-  .cta-btn{
-    position: relative;
-    right: 30%;
-    margin-right: 100px;
-  }
-}
-/* footer */
-#footer{
+
+/* ================= FOOTER ================= */
+
+#footer {
   text-align: center;
-  padding:50px;
+  padding: 50px;
+  background: var(--dark-blue);
+  color: white;
 }
-.f-icon{
-  margin:3% 1%;
+
+.f-icon {
+  margin: 3% 1%;
+  transition: 0.3s;
 }
-.f-para{
-  font-family: "Montserrat";
-  font-weight: lighter;
-  color: #8f8f8f;
+
+.f-icon:hover {
+  color: var(--secondary-blue);
+  transform: scale(1.2);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
