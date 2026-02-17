@@ -110,24 +110,17 @@ body {
 /* ================= TESTIMONIALS ================= */
 
 #testimonials {
-  background: linear-gradient(to right, #2563eb, #0f172a);
-  animation: fadeInSection 1s ease;
-}
-
-@keyframes fadeInSection {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: white;
+  padding: 100px 0;
 }
 
 .testimonial-text {
   font-size: 2rem;
   font-weight: bold;
-  animation: fadeInText 1.2s ease;
-}
-
-@keyframes fadeInText {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto 40px;
 }
 
 .testimonial-user {
@@ -137,7 +130,6 @@ body {
   gap: 20px;
 }
 
-/* Avatar hover animation */
 .testimonial-avatar {
   width: 90px;
   height: 90px;
@@ -156,6 +148,7 @@ body {
   font-size: 1.2rem;
   margin: 0;
 }
+
 
 /* ================= FEATURES ================= */
 
@@ -202,4 +195,5 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
+
 
